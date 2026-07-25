@@ -95,3 +95,4 @@ while True :
         print("you exit from the student manager system")
     else:
         print("invalid statement")
+    print("hello world")
