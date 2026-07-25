@@ -1,0 +1,97 @@
+# class Student :
+
+#      def __init__(self,name,age,marks):
+#          self.name = name
+#          self.age = age
+#          self.marks = marks
+      
+#      def student_details(self):
+#           print("name", self.name)
+#           print("age",self.age)
+#           print("marks",self.marks)
+#      def check_result(self):
+#           if self.marks >= 40:
+#                print("you passed")
+#           else:
+#                print("you fail better do  next time")
+            
+
+#      s1 = Student("shivam",18,90)
+#      s1.student_details()
+#      s1.check_result()
+#student report card generator
+students = {}
+subjects = ["maths","english","hindi","science","buisness"]
+def calculate_grade(percentage):
+    if percentage>=90:
+       return "A"
+    elif percentage>=75:
+        return"B"
+    elif percentage>=50:
+        return"C"
+    elif percentage>=40:
+        return"D"
+    else:
+        return"fail"
+# marks = int(input("enter the marks of five subjects"))
+# marks = []
+# name = input("enter the name of students")
+# roll = int(input("enter the roll number"))
+# for subject in subjects:
+#     m =int( input((f"enter the marks{subject}")))
+#     marks.append(m)
+
+# total = sum(marks)
+# percentage = total/len(subjects)
+# grade = calculate_grade(percentage)
+
+# print("........report card.....")
+# print("name",name)
+# print("roll number",roll)
+# for i in range (len(subjects)):
+#    print(f"{subjects[i]}:{marks[i]}")
+
+# print(".........")
+# print("sum of the number",total)
+# print("percentage of the student",percentage)
+# print("grade of the student",grade)
+
+students = {}
+
+while True :
+    print(".........student manager system.........")
+    print("1.add student")
+    print("2.view student")
+    print("3.check result")
+    print("4.exit")
+    
+    choice = int(input("enter the choice : "))
+    if choice == 1:
+        name = input("enter the name of student")
+        marks = int(input("marks of student"))
+        students[name] = marks
+        print(f"{name} is sussesful added")
+
+    elif choice == 2 :
+        if  not students:
+            print("no dtudent found ")
+        
+        else:  
+          for name, marks in students.items():
+             print(name, ":", marks)
+    
+    elif choice == 3:
+        name = input ("enter the name for check the result")
+        if name in students:
+            marks = students[name]
+
+            if marks > 40:
+                print("pass")
+            elif marks<40:
+                print("fail")
+            else:
+                print("student not found")
+    elif choice==4:
+        print("you exit from the student manager system")
+    else:
+        print("invalid statement")
