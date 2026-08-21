@@ -239,3 +239,108 @@
 # for i in range (1,n+1):
 #     fact*=i
 # print(fact)
+
+# # list and dictionary
+# numbers = [12, 45, 7, 23, 56, 89, 34, 10]
+# max_number = numbers[0]
+# /max number
+# for num in numbers[1::]:
+    
+#     if num > max_number:
+#         max_number = num
+# print(max_number)
+# min number
+# min_number = numbers[0]
+# for num in numbers[1:]:
+#     if num < min_number:
+#         min_number = num
+# print(min_number)
+# average number
+
+# sum = numbers[0] +numbers[1] + numbers[2] +numbers[3] + numbers[4] +numbers[5] +numbers[6] +numbers[7]
+# average_number = sum / len(numbers)
+# print(average_number)
+# for num in numbers:
+# total+=num
+# average = total / len(numbers)
+# for num in numbers[1:]:
+#     if num > 30:
+#         print(num)
+
+# numbers = [ 10,20 ,10 ,30,20,40,50,30]
+# unique_number = []
+# for num in numbers:
+#     if num not in unique_number:
+#         unique_number.append(num)
+# print(unique_number)
+
+# students = {
+#     "Rahul": 78,
+#     "Aman": 92,
+#     "Priya": 85,
+#     "Riya": 67,
+#     "Karan": 91
+# }
+# print(max(students.keys()))
+# for students , marks in students.items():
+#     print(students ,marks)
+# highest_student = ""
+# highest_marks =0
+
+# for name , marks in students.items():
+#     if marks > highest_marks:
+#         highest_marks = marks
+#         highest_student = name
+# print(highest_student)
+# print(highest_marks)
+# lowest_student =""
+# lowest_marks = 0
+# for name , marks in students.items():
+#     if marks < lowest_marks:
+#         lowest_marks = marks
+#         lowest_student = name
+# print(lowest_marks)
+# print(lowest_student)
+
+# average 
+# sum = 0
+# average_score = 0
+# for name , marks in students.items():
+#     sum+=marks
+#     average_score = sum / len(students)
+    
+# print(average_score)
+
+# student scoring above 80:
+
+# for name , marks in students.items():
+#     if marks > 80:
+#         print(name , marks)
+
+
+numbers = [10, 20, 30, 40, 50]
+def calculate_statics(numbers):
+    print("1 . max m, 2. for min , 3.for average"  )
+    choice = int(input("enter the choice"))
+    if choice==1:
+        max_number = numbers[0]
+        for num in numbers[1:]:
+           if num > max_number :
+             max_number = num
+        print(max_number)
+        
+    elif choice==2:
+      min_number = numbers[0]
+      for num in numbers[1:]:
+           if num < min_number:
+            min_number = num
+      print(min_number)
+    else:
+        total = 0
+        average =0
+        for num in numbers:
+            total+=num
+            average = total/len(numbers)
+        print(average)
+
+calculate_statics(numbers) 
