@@ -318,29 +318,76 @@
 #         print(name , marks)
 
 
-numbers = [10, 20, 30, 40, 50]
-def calculate_statics(numbers):
-    print("1 . max m, 2. for min , 3.for average"  )
-    choice = int(input("enter the choice"))
-    if choice==1:
-        max_number = numbers[0]
-        for num in numbers[1:]:
-           if num > max_number :
-             max_number = num
-        print(max_number)
+# numbers = [10, 20, 30, 40, 50]
+# def calculate_statics(numbers):
+#     print("1 . max m, 2. for min , 3.for average"  )
+#     choice = int(input("enter the choice"))
+#     if choice==1:
+#         max_number = numbers[0]
+#         for num in numbers[1:]:
+#            if num > max_number :
+#              max_number = num
+#         print(max_number)
         
-    elif choice==2:
-      min_number = numbers[0]
-      for num in numbers[1:]:
-           if num < min_number:
-            min_number = num
-      print(min_number)
-    else:
-        total = 0
-        average =0
-        for num in numbers:
-            total+=num
-            average = total/len(numbers)
-        print(average)
+#     elif choice==2:
+#       min_number = numbers[0]
+#       for num in numbers[1:]:
+#            if num < min_number:
+#             min_number = num
+#       print(min_number)
+#     else:
+#         total = 0
+#         average =0
+#         for num in numbers:
+#             total+=num
+#             average = total/len(numbers)
+#         print(average)
 
-calculate_statics(numbers) 
+# calculate_statics(numbers) 
+
+# square of the list
+# numbers = [2, 5, 8, 10, 13, 20]
+# square = [0]
+# for num in numbers:
+#     num*num
+#     square.append(num*num)
+# print(square)
+# to print the even  number
+# numbers = [2, 5, 8, 10, 13, 20]
+# even = [0]
+# for num in numbers:
+#     if (num%2==0):
+#         even.append(num)
+# print(even)
+
+# students = {
+#     "Rahul": 78,
+#     "Aman": 92,
+#     "Priya": 35,
+#     "Riya": 67,
+#     "Karan": 28
+# }
+
+# students_below_40 = {
+#     name: marks for name, marks in students.items() if marks <= 40
+# }
+# print(students_below_40)
+
+# spending = [1200, 4500, 800, 3200, 1500, 5000, 700]
+# greater = []
+# for num in spending:
+    
+#     if(num>2000):
+#         greater.append(num)
+# print(greater)
+# student anlyser
+
+# marks = [45, 78, 90, 66, 88]
+# marks_above_40=[num for num in marks if num >40]
+# print(marks_above_40)
+# marks_below_40 = [num for num in marks if num <40]
+# print(marks_below_40)
+# marks_square = [num*num for num in marks ]
+# print(marks_square)
+# high_scores = [num for num in marks if num>80]
+# print(high_scores)
