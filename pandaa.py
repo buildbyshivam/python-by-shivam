@@ -73,3 +73,34 @@
 # df["Result"] = df["Marks"].apply(check_result)
 
 # print(df)
+
+import pandas as pd
+
+data = {
+    "Name": ["Aman", "Riya", "Rahul", "Neha", "Riya"],
+    "Age": [20, 21, None, 19, 21],
+    "Marks": [78, 91, None, 88, 91],
+    "City": ["Delhi", "Jaipur", "Delhi", None, "Jaipur"]
+}
+
+df = pd.DataFrame(data)
+
+# print(df)
+# print(df.isnull())
+# print(df.isna())
+# remove the null contains rows
+# df.isnull()
+# df = df.dropna()
+# print(df)
+# fill the value of the null by the mean
+
+# df.isnull()
+# Mean =df["Marks"].mean()
+# df["Marks"]= df["Marks"].fillna(Mean)
+# print(df)
+# to print the duplicate value
+# df.duplicated()
+# print(df.drop_duplicates())
+print(df["Name"].dtype)
+print(df["Age"].dtype)
+print(df["Marks"].dtype)
