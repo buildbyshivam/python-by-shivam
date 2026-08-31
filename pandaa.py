@@ -74,16 +74,16 @@
 
 # print(df)
 
-import pandas as pd
+# import pandas as pd
 
-data = {
-    "Name": ["Aman", "Riya", "Rahul", "Neha", "Riya"],
-    "Age": [20, 21, None, 19, 21],
-    "Marks": [78, 91, None, 88, 91],
-    "City": ["Delhi", "Jaipur", "Delhi", None, "Jaipur"]
-}
+# data = {
+#     "Name": ["Aman", "Riya", "Rahul", "Neha", "Riya"],
+#     "Age": [20, 21, None, 19, 21],
+#     "Marks": [78, 91, None, 88, 91],
+#     "City": ["Delhi", "Jaipur", "Delhi", None, "Jaipur"]
+# }
 
-df = pd.DataFrame(data)
+# df = pd.DataFrame(data)
 
 # print(df)
 # print(df.isnull())
@@ -101,6 +101,70 @@ df = pd.DataFrame(data)
 # to print the duplicate value
 # df.duplicated()
 # print(df.drop_duplicates())
-print(df["Name"].dtype)
-print(df["Age"].dtype)
-print(df["Marks"].dtype)
+# print(df["Name"].dtype)
+# print(df["Age"].dtype)
+# print(df["Marks"].dtype)
+
+# import pandas as pd
+
+# data = {
+#     "Name": ["Aman", "Riya", "Rahul", "Neha", "Riya"],
+#     "Age": [20, 21, None, 19, 21],
+#     "Marks": [78, 91, None, 88, 91],
+#     "City": ["Delhi", "Jaipur", "Delhi", None, "Jaipur"]
+# }
+
+# df = pd.DataFrame(data)
+# print(df.shape)
+# print(df.columns)
+# # print(df.rows)
+# print(df.dtypes)
+# print(df.info)
+# mean = df["Age"].mean()
+# df["Age"] = df["Age"].fillna(mean)
+# df["Age"] = df["Age"].astype(int)
+# print(df["Age"].dtype)
+
+# print(df["Marks"].mean())
+# print(df["Marks"].max())
+# print(df["Marks"].min())
+# print(df["Marks"].sum())
+
+# print((df["Marks"] > 80) & (df["Age"]>20))
+# print(df[(df["Marks"] > 80 )& (df["Age"]>20)])
+# sorting the values udsing pandas
+# mean = df["Marks"].mean()
+# df["Marks"] = df["Marks"].fillna(mean)
+# print(df.sort_values("Marks"))
+# print(df.sort_values("Marks",ascending = False))
+# small student analyser
+# Total Students:
+# Average Marks:
+# Highest Marks:
+# Lowest Marks:
+
+# Top Students:
+# Name + Marks where Marks > 80
+
+# Sorted Students:
+# Highest → Lowest
+
+import pandas as pd
+
+data = {
+    "Name": ["Aman", "Riya", "Rahul", "Neha", "Riya"],
+    "Age": [20, 21, None, 19, 21],
+    "Marks": [78, 91, None, 88, 91],
+    "City": ["Delhi", "Jaipur", "Delhi", None, "Jaipur"]
+}
+
+df = pd.DataFrame(data)
+# print(df.shape[0])
+# print(len(df))
+# print(df["Marks"].mean())
+# print(df["Marks"].max())
+# print(df["Marks"].min())
+# df["Marks"]= (df["Marks"]>80)
+# print(df["Marks"], ["Name"])
+
+print(df.loc[df["Marks"] > 80, ["Name", "Marks"]])
