@@ -169,20 +169,39 @@
 
 # print(df.loc[df["Marks"] > 80, ["Name", "Marks"]])
 
-import pandas as pd
+# import pandas as pd
 
-data = {
-    "Name": ["Aman", "Riya", "Rahul", "Neha", "Vikas", "Priya", "Arjun", "Kavya"],
-    "Age": [20, 21, 19, 22, 20, 21, 22, 20],
-    "Marks": [78, 91, 65, 88, 72, 95, 82, 76],
-    "City": ["Delhi", "Jaipur", "Delhi", "Pune", "Mumbai", "Pune", "Delhi", "Mumbai"]
-}
+# data = {
+#     "Name": ["Aman", "Riya", "Rahul", "Neha", "Vikas", "Priya", "Arjun", "Kavya"],
+#     "Age": [20, 21, 19, 22, 20, 21, 22, 20],
+#     "Marks": [78, 91, 65, 88, 72, 95, 82, 76],
+#     "City": ["Delhi", "Jaipur", "Delhi", "Pune", "Mumbai", "Pune", "Delhi", "Mumbai"]
+# }
 
-df = pd.DataFrame(data)
+# df = pd.DataFrame(data)
 
 # print(df)
 # print(df.groupby("City")["Marks"].mean())
 # print(df.groupby("City")["Marks"].max())
 # print(df.groupby("City")["Marks"].min())
 # print(df.groupby("City")["Marks"].agg(["max" , "min" ,"mean"]))
-print (df.groupby("City")["Marks"].count())
+# print (df.groupby("City")["Marks"].count())
+
+# import pandas as pd
+
+# data = {
+#     "Name": ["Aman", "Riya", "Rahul", "Neha", "Vikas", "Priya", "Arjun", "Kavya", "Rohit", "Sneha"],
+#     "Age": [20, 21, 19, 22, 20, 21, 22, 20, 19, 21],
+#     "Marks": [78, 91, 65, 88, 72, 95, 82, 76, 69, 89],
+#     "City": ["Delhi", "Jaipur", "Delhi", "Pune", "Mumbai", "Pune", "Delhi", "Mumbai", "Jaipur", "Pune"]
+# }
+
+# df = pd.DataFrame(data)
+# print(df.groupby("City")["Marks"].mean().sort_values(ascending=False))
+# print(df.groupby("City")["Marks"]>80)
+# print(df.groupby("City")["Marks"].count())
+# print(df.groupby("City")["Marks"].mean())
+# print(df.groupby("City")["Marks"].max())
+# print(df.groupby("City")["Marks"].min())
+# print(df.groupby("City")["Marks"].agg(["count","max" , "min" ,"mean"]))
+# print(df.groupby("City")["Marks"].mean().max())
